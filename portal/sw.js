@@ -1,5 +1,5 @@
 // Keeps the launcher screen available offline. The app itself always loads live from Google.
-var CACHE = 'amalga-portal-v1';
+var CACHE = 'amalga-portal-v2';   // v2: wording
 var SHELL = ['./', 'index.html', 'manifest.json', '../icons/amalga-app-192.png', '../icons/amalga-app-512.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(SHELL); }).then(function () { return self.skipWaiting(); }));

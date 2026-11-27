@@ -59,10 +59,10 @@ var HELP_TITLE = "The Agent Portal didn’t open", HELP_TEXT = "Check your inter
     card('Almost ready', 'Paste the Apps Script web app link (it ends in /exec) into APP_URL at the top of this page’s script.', '');
     return;
   }
-  // iPhone and iPad block Google sign-in inside other sites, so People Hub runs from Safari there.
+  // iPhone and iPad block Google sign-in inside other sites, so the Agent Portal runs from Safari there.
   if (NEEDS_GOOGLE_SIGNIN && iOS) {
     if (!installed) { location.replace(target); return; }
-    card('On iPhone, People Hub runs from Safari', 'Open it, then tap Share › Add to Home Screen to keep it on your home screen.', openBtn('Open People Hub'));
+    card('On iPhone, the Agent Portal runs from Safari', 'Open it, then tap Share › Add to Home Screen to keep it on your home screen.', openBtn('Open the Agent Portal'));
     return;
   }
   // The app tells us it loaded (one line at the top of its page). Until then the cover stays up.
